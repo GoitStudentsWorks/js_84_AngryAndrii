@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/js_84_AngryAndrii/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Treats</title>
+    <link
+      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/js_84_AngryAndrii/assets/index-8b626713.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_84_AngryAndrii/assets/change-theme-29083edc.js">
+    <link rel="stylesheet" href="/js_84_AngryAndrii/assets/change-theme-969d6fc9.css">
+  </head>
+  <body>
+    <!------------------------- Header --------------------------->
+    <header class="header header-fav" id="header">
+  <div class="container">
+    <!--------------MOBILE HEADER--------------------->
+    <div class="header-sup header-mobile">
+      <a href="./index.html" class="logo-header"><span>tasty</span>treads. </a>
+      <div class="buttons-container">
+        <a class="shop-btn">
+          <svg width="24" height="24">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-cart"></use>
+          </svg>
+        </a>
+        <button
+          type="button"
+          class="open-hamburger js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="32">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hamburger-menu js-menu-container">
+      <button class="modal-button js-close-menu" id="mobile-menu" type="button">
+        <svg width="32" height="32">
+          <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-modal-close"></use>
+        </svg>
+      </button>
+      <nav class="header-nav">
+        <ul class="list-header">
+          <li class="nav-list">
+            <a href="./index.html" class="item-nav">Home</a>
+          </li>
+          <li class="nav-list">
+            <a href="./favorites.html" class="item-nav">Favorites</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="down-content">
+        <div class="theme-switch-container for-mobile">
+          <input
+            type="checkbox"
+            id="themeSwitchMobile"
+            class="theme-switch for-mobile"
+          />
+          <label for="themeSwitchMobile" class="slider"></label>
+        </div>
+      </div>
+    </div>
+    <!---------TABLET-------->
+    <div class="header-tablet">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link nav-link-home current">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./favorites.html" class="nav-link nav-link-fav">Favorites</a>
+          </li>
+        </ul>
+        <a class="logo-header" href="./index.html"><span>tasty</span>treads.</a>
+        <div class="actions">
+          <a class="shop-btn">
+            <svg width="24" height="24">
+              <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-cart"></use>
+            </svg>
+          </a>
+          <div class="theme-switch-container for-tablet-pc">
+            <input
+              type="checkbox"
+              id="themeSwitchTablet"
+              class="theme-switch for-tablet-pc"
+            />
+            <label for="themeSwitchTablet" class="slider"></label>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!-------------------------- Main ------------------------------->
+    <main>
+      <!------------------------- loader ----------------------------->
+      <span class="loader visually-hidden"></span>
+      <!-- Hero -->
+      <!-- hero section -->
+<!--  -->
+<section class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-div">
+      <div class="hero-wrapper">
+        <h1 class="hero-title">
+          Learn to Cook <span>Tasty Treats'</span> Customizable Masterclass
+        </h1>
+        <p class="hero-description">
+          TastyTreats - Customize Your Meal with Ingredient Options and
+          Step-by-Step Video Guides.
+        </p>
+        <button class="btn hero-btn shop-btn">Order now</button>
+      </div>
+      <div class="main-swiper-wrapper">
+      <div class="swiper">
+        <div class="swiper-wrapper" id="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <div class="main-wrapper container">
+        <aside class="left-block">
+          <!-- categories -->
+          <section class="section-filter-categories">
+  <div class="categories-filter"></div>
+</section>
+
+          <!-- popular recipes -->
+          <section class="popular-recipe">
+
+    <div class="popular-container">
+        <h3 class="popular-title">POPULAR RECIPIES</h3>
+        <ul class="popular-list"></ul>
+    </div>
+</section>
+        </aside>
+        <div class="right-block">
+          <!-- search -->
+          <section class="search-section">
+  <div class="search-container">
+    <form class="search-filters">
+      <label class="search-label">
+        Search
+        <svg class="icon-search">
+          <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-search"></use>
+        </svg>
+        <input
+          type="text"
+          id="search-key"
+          name="search-key"
+          placeholder="Enter text"
+        />
+      </label>
+
+      <label class="time-label">
+        Time
+        <select name="time-key" id="time-key">
+          <option data-placeholder="true"></option>
+
+          <option value="10">10 min</option>
+          <option value="20">20 min</option>
+          <option value="30">30 min</option>
+          <option value="40">40 min</option>
+        </select>
+      </label>
+
+      <label class="area-label">
+        Area
+        <select name="area-key" id="area-key">
+          <option data-placeholder="true"></option>
+        </select>
+      </label>
+
+      <label class="ingredients-label">
+        Ingredients
+        <select name="ingredients-key" id="ingredients-key">
+          <option data-placeholder="true"></option>
+        </select>
+      </label>
+
+      <p class="filter-reset">
+        <svg class="reset-icon">
+          <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-search-close"></use>
+        </svg>
+        Reset the filter
+      </p>
+    </form>
+  </div>
+</section>
+
+          <!-- recipes -->
+          <section class="recipes-section">
+  <div class="recipes-block"></div>
+</section>
+
+        </div>
+      </div>
+    </main>
+    <!--------------------- modal windows -------------------------->
+    <!-- recipe modal -->
+    <section class="backdrop-see-recipe visually-hidden" data-modal-recipe>
+  <div class="modal_recipe">
+  <button
+    type="button"
+    class="modal__close"
+    data-modal-close
+  ><svg class="modal-close-img" width="20" height="20">
+    <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-modal-close"></use>
+  </svg></button>
+  <div class="main-info">
+    <div class="media-tablet">
+    <div class="media" id="media"></div>
+    <h2 class="name-recipe" id="name-recipe"></h2>
+    </div>
+    <div class="rating-time">
+        <div class="rating-wrap">
+          <p class="rating"></p>
+          <svg class="icon-star" width="18" height="18">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-star"></use>
+          </svg>
+          <svg class="icon-star" width="18" height="18">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-star"></use>
+          </svg>
+          <svg class="icon-star" width="18" height="18">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-star"></use>
+          </svg>
+          <svg class="icon-star" width="18" height="18">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-star"></use>
+          </svg>
+          <svg class="icon-star" width="18" height="18">
+            <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-star"></use>
+          </svg>
+        </div>
+        <p class="modal-time"></p>
+    </div>
+    <ul class="ingredients"></ul>
+  </div>
+  <ul class="tags"></ul>
+  <p class="instructions" ></p>
+  <div class="modal-btn">
+    <button type="button" class="btn-favorite btn" id="add-favorite">
+      Add to favorite
+    </button> 
+  </div>
+</div>
+</section>
+
+
+
+
+
+    <!-- rating modal -->
+    
+    <!-- order-now modal -->
+    <div class="backdrop-order">
+  <div id="modal-order" class="modal-order">
+    <button type="button" class="order-modal-close-btn">
+      <svg class="order-icon-close" width="20" height="20">
+        <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-modal-close"></use>
+      </svg>
+    </button>
+    <div class="wrap-recipe">
+      <form action="#" class="modal-form-order" autocomplete="on">
+        <strong class="contact-modal-title">Order now</strong>
+
+        <span class="contact-field-wrapper">
+          <label class="input-box">
+            <input
+              type="text"
+              class="input-field input-field-name input-js"
+              name="name"
+              required
+              pattern="[A-Za-z]{1,32}"
+              placeholder="Anton"
+            />
+            <span class="order-input-label">Name</span>
+          </label>
+
+          <label class="input-box">
+            <input
+              type="tel"
+              class="input-field input-field-tel input-js"
+              name="tel"
+              required
+              pattern="\+[0-9]{12}"
+              placeholder="+388888888888"
+            />
+            <span class="order-input-label">Phone number</span>
+          </label>
+
+          <label class="input-box">
+            <input
+              type="email"
+              class="input-field input-field-tel input-js"
+              name="email"
+              required
+              pattern="[^@\s]+@[^@\s]+"
+              placeholder="youremail@gmail.com"
+            />
+            <span class="order-input-label">Email</span>
+          </label>
+          <label class="input-box">
+            <textarea
+              class="input-field input-field-textarea input-js"
+              name="comment"
+              rows="4"
+            ></textarea>
+            <span class="order-input-label">Comment</span>
+          </label>
+        </span>
+
+        <button type="submit" class="order-btn" data-modal="2">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- pagination -->
+    <div id="pagination" class="tui-pagination"></div>
+    <!------------------------ ScrollUp ---------------------------->
+    <!------------Скрол догори сайту----------->
+<button class="btn-up btn-up_hide">
+  <svg class="btn-up-icon" width="53" height="53">
+    <use href="/js_84_AngryAndrii/assets/sprite-96ac95c4.svg#icon-circle-up"></use>
+  </svg>
+</button>
+
+
+    <!------------------------------ js scripts -------------------->
+    
+  </body>
+</html>
